@@ -265,18 +265,16 @@ h6 {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.main-wrapper {
-  margin-left: var(--sidebar-width);
-  background: #fff;
-  }
+.content {
+  padding: 3rem 2rem;
+}
 
 .main-wrapper .container {
   max-width: var(--content-max-width);
 }
 .page-title {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+  position: relative;
+  z-index: 1;
   transition: all 0.2s;
 }
 .sticky {
@@ -813,3 +811,18 @@ div.comment:first-of-type {
 .comment-reply-title small a:hover {
   text-decoration: underline;
 }
+
+body.admin-bar .header {
+  top: 32px;
+}
+
+body.admin-bar .page-title {
+  top: 32px;
+}
+
+.header {
+  overflow-y: auto;
+}
+
+
+.header .widget,.header .widget *,.header .navbar-nav li a,.header .widget-title{font-size:.8rem!important;line-height:1.4!important}

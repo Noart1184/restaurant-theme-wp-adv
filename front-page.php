@@ -1,17 +1,34 @@
 <?php get_header(); ?>
 
-<article class="content px-3 py-3 p-md-5">
-    <?php
-    if (have_posts()) {
-        while (have_posts()) {
-            the_post();
-            the_content();
-            
-        }
-    }
-    ?>
-    </article>
+<main class="restaurant-page-content px-3 py-5 p-md-5">
+
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+        <!-- Page Hero -->
+        <header class="restaurant-page-header text-center mb-5">
+            <h1 class="page-title"><?php the_title(); ?></h1>
+            <?php if (has_post_thumbnail()) : ?>
+                <div class="page-hero-image mb-4">
+                    <?php the_post_thumbnail('large', ['class' => 'img-fluid rounded']); ?>
+                </div>
+            <?php endif; ?>
+        </header>
+
+        <!-- Page Content -->
+        <article class="restaurant-page-body">
+            <?php the_content(); ?>
+        </article>
+
+    <?php endwhile; else : ?>
+        <p><?php esc_html_e('Sorry, no content found.', 'wp-adv1'); ?></p>
+    <?php endif; ?>
+
+    <!-- Optional Call-to-Action (Reservation) -->
+    <section class="restaurant-cta mt-5 text-center">
+        <p>Enjoy our delicious dishes? Reserve your table today!</p>
+        <a href="<?php echo esc_url(home_url('/reservation')); ?>" class="btn btn-primary btn-lg">Reserve Now</a>
+    </section>
+
+</main>
 
 <?php get_footer(); ?>
-
-    

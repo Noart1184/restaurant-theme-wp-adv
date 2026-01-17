@@ -1,0 +1,307 @@
+/* =============================================
+   Professional Restaurant Theme CSS
+============================================= */
+
+/* === BODY & GENERAL === */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff8f0;  /* Warm cream */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: #b22222;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #ff4500;
+    text-shadow: 0 0 8px rgba(255,69,0,0.6);
+}
+
+/* === HEADERS === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: #800000;
+    text-shadow: 0 0 6px rgba(178,34,34,0.6);
+}
+
+.page-title, .dish-title, .archive-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #b22222;
+    text-shadow: 0 0 8px rgba(178,34,34,0.8);
+}
+
+/* === CONTAINERS === */
+.restaurant-page-content,
+.restaurant-archive-content,
+.restaurant-dish-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background-color: #fffaf0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* === DISH / POST CARDS === */
+.restaurant-menu-item {
+    border: none;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #fff5f0, #ffe8dc);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.restaurant-menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+.restaurant-menu-item img {
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.restaurant-menu-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* === META INFO === */
+.meta span {
+    margin-right: 1rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.meta i {
+    color: #b22222;
+}
+
+/* === BUTTONS === */
+.btn-primary, .btn-outline-primary {
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(178,34,34,0.4);
+}
+
+.btn-primary {
+    background-color: #b22222;
+    border: 2px solid #b22222;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(255,255,255,0.6);
+}
+
+.btn-primary:hover {
+    background-color: #ff4500;
+    border-color: #ff4500;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,69,0,0.8);
+    box-shadow: 0 10px 30px rgba(255,69,0,0.5);
+}
+
+.btn-outline-primary {
+    border: 2px solid #b22222;
+    color: #b22222;
+}
+
+.btn-outline-primary:hover {
+    background-color: #b22222;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(255,255,255,0.7);
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: #800000;
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.footer a {
+    font-family: 'Lexend', sans-serif;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffcccb;
+    text-shadow: 0 0 6px rgba(255,255,255,0.8);
+}
+
+/* === HERO IMAGE / FEATURED IMAGE === */
+.dish-hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dish-hero img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* === COMMENTS / REVIEWS === */
+.comments-wrapper {
+    margin-top: 3rem;
+}
+
+.comment-reply-title {
+    color: #b22222;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    text-shadow: 0 0 6px rgba(178,34,34,0.7);
+    margin-bottom: 1rem;
+}
+
+/* === ARCHIVE / MENU GRID === */
+.restaurant-archive-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* === TAGS / CATEGORIES === */
+.tag, .category {
+    display: inline-block;
+    background-color: #fff2f0;
+    color: #b22222;
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.4rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(178,34,34,0.2);
+}
+
+/* === 404 PAGE === */
+.restaurant-404-page {
+    text-align: center;
+    background: linear-gradient(135deg, #fff4f0, #ffe8dc);
+    padding: 5rem 2rem;
+    border-radius: 20px;
+    margin: 3rem auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.restaurant-404-page h1 {
+    font-size: 4rem;
+    color: #b22222;
+    text-shadow: 0 0 12px rgba(178,34,34,0.9);
+    margin-bottom: 1rem;
+}
+
+.restaurant-404-page p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+/* === CTA Sections === */
+.restaurant-cta {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.restaurant-cta .btn {
+    margin: 0.7rem;
+    box-shadow: 0 8px 25px rgba(178,34,34,0.4);
+}
+
+/* === HR & Misc === */
+hr {
+    border-color: #f0e0d6;
+    margin: 3rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* NAVBAR LINKS GLOW */
+.navbar-nav .nav-link {
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff4500;
+    text-shadow: 0 0 6px #ff4500, 0 0 12px #b22222;
+}
+
+/* NAVBAR ACTIVE LINK */
+.navbar-nav .nav-item.active .nav-link {
+    color: #ff4500;
+    text-shadow: 0 0 8px #ff4500, 0 0 15px #b22222;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* prevents horizontal scroll */
+}
+/* === RED NAVBAR === */
+.navbar {
+    background-color: #b22222 !important;  /* Wine red */
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.navbar .navbar-brand:hover {
+    color: #ff4500 !important;
+    text-shadow: 0 0 8px #ff4500;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    color: #fff;
+    padding: 0.3rem 0.75rem;
+    transition: all 0.3s ease;
+}
+
+/* Navbar link hover glow */
+.navbar-nav .nav-link:hover {
+    color: #ffcccb;
+    text-shadow: 0 0 6px #ff4500, 0 0 12px #b22222;
+}
+
+/* Active link glow */
+.navbar-nav .nav-item.active .nav-link {
+    color: #ff4500;
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #b22222;
+}
+
+/* Hamburger icon */
+.navbar-toggler {
+    border-color: #ff4500;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
